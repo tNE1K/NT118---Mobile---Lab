@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cau5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_hName"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thumbnail:"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_hName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_hThumbnail"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promotion:"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_hThumbnail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_hPromo"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_DishName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_hPromo"
+        android:singleLine="true"/>
+
+    <Spinner
+        android:spinnerMode="dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hSpinner"
+        app:layout_constraintTop_toTopOf="@id/tv_hThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/tv_hThumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_hThumbnail"
+        android:background="@android:color/transparent"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_isPromo"
+        app:layout_constraintTop_toTopOf="@id/tv_hPromo"
+        app:layout_constraintLeft_toRightOf="@id/tv_hPromo"
+        app:layout_constraintBottom_toBottomOf="@id/tv_hPromo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddDish"
+        android:text="ADD A NEW DISH"
+        app:layout_constraintTop_toBottomOf="@id/tv_hPromo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"/>
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:numColumns="2"
+        app:layout_constraintTop_toBottomOf="@id/btnAddDish"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/gv_Dish" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
